@@ -90,7 +90,7 @@ window.addEventListener("load", typeWriterOnceEraseThenStop);
 
   window.addEventListener("load", typeWork);
 
-const staticLine = "Hi! I'm Ana,";
+const staticLine = "Hi! I'm <span class='highlight-pink'>Ana</span>,";
 const dynamicPhrases = [
   "I design ✍️",
   "I create ✍️",
@@ -110,11 +110,13 @@ function typeEffect() {
   if (phase === "static") {
     target.innerHTML = staticLine.substring(0, charIndex + 1);
     charIndex++;
-
     if (charIndex === staticLine.length) {
       phase = "dynamic";
       charIndex = 0;
       setTimeout(typeEffect, 500);
+      
+    const crown = document.getElementById("crown-image");
+    crown.classList.add("show");
     } else {
       setTimeout(typeEffect, 60);
     }
@@ -162,4 +164,18 @@ function typeEffect() {
 }
 
 window.addEventListener("load", typeEffect);
+
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+  });
+
+  // Optional: Close menu when a link is clicked
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+    });
+  });
 
