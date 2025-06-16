@@ -335,6 +335,75 @@ h1 {
   transform: scale(1);     /* scale back to normal */
 }
 
+/* Existing styles here... unchanged */
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-section {
+    max-width: 100%;
+    padding: 20px 0;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .btn-cta {
+    width: 100%;
+    max-width: 220px;
+    font-size: 16px;
+  }
+
+  .image-section {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .profile-box {
+    width: 260px;
+    height: 260px;
+    outline-offset: 6px;
+    padding: 8px;
+  }
+
+  .crown-icon {
+    width: 60px;
+    top: -20px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .btn-cta {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .profile-box {
+    width: 220px;
+    height: 220px;
+  }
+
+  .crown-icon {
+    width: 50px;
+    top: -15px;
+    left: 8px;
+  }
+}
 
 
 
