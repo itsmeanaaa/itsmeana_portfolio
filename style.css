@@ -120,6 +120,10 @@ a{
   align-items: center;
   transition: transform 0.3s ease;
 }
+.close-btn {
+  display: none;
+}
+
 
 @media (max-width: 768px) {
   .hamburger {
@@ -161,6 +165,7 @@ a{
   }
 
   .close-btn {
+    display: block;
     align-self: flex-end;
     font-size: 28px;
     background: none;
