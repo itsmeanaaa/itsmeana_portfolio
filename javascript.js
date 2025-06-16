@@ -165,17 +165,21 @@ function typeEffect() {
 
 window.addEventListener("load", typeEffect);
 
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('navMenu');
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+const closeBtn = document.getElementById('closeBtn');
 
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-  });
+hamburger.addEventListener('click', () => {
+  navMenu.classList.add('open');
+});
 
-  // Optional: Close menu when a link is clicked
-  document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-    });
+closeBtn.addEventListener('click', () => {
+  navMenu.classList.remove('open');
+});
+
+document.querySelectorAll('.nav-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('open');
   });
+});
 
